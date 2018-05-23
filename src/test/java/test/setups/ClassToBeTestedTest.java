@@ -48,4 +48,10 @@ public class ClassToBeTestedTest {
 
         return new String(Files.readAllBytes(Paths.get(url.toURI())));
     }
+
+    @SuppressWarnings("unchecked")
+    private Map<String, Object> readJsonFromFile(String filePath) throws Exception {
+        return jsonAsMap(fileFromResourcesAsString(filePath));
+    }
+
 }
